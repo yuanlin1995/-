@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./lib/jquery-1.8.3.min.js"></script>
+    <script src="./lib/swiper/js/swiper.min.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./lib/swiper/css/swiper.min.css">
+    <script src="./lib/template-web.js"></script>
+    <script>
+        document.querySelector('html').style.fontSize = window.screen.width / 10 + 'px';
+        if(window.screen.width > 500){
+            document.querySelector('html').style.fontSize = '50px';
+        }
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="search">
+            <input type="text" placeholder="酒店/目的地/景点/航班">
+        </div>
+        <div class="icon">
+            <img src="./imgs/icon.png" alt="">
+            <span>我的</span>
+        </div>
+    </div>
+    <div class="main"></div>
+</body>
+
+</html>

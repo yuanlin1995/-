@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+input {
+  border: 0;
+  outline: 0;
+}
+
+img {
+  vertical-align: middle;
+  border: 0;
+}
+
+body {
+  font-size: 0.3381642512rem;
+}
+
+.header {
+  padding: 0 0.2415458937rem;
+  height: 1.0628019324rem;
+  border-bottom: 1px solid #dddddd;
+  display: flex;
+  align-items: center;
+}
+.header .icon {
+  flex-basis: 0.845410628rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.header .icon img {
+  width: 0.4347826087rem;
+  height: 0.38647343rem;
+}
+.header .icon span {
+  font-size: 0.3623188406rem;
+  color: #099fde;
+}
+.header .search {
+  flex: 1;
+  height: 0.6763285024rem;
+  border: 0.0241545894rem solid #999;
+  border-radius: 0.1207729469rem;
+  line-height: 0.6763285024rem;
+  padding-left: 0.7246376812rem;
+  background: url("../imgs/glass.png") 0.1690821256rem center/0.4106280193rem 0.4106280193rem no-repeat;
+}
+
+/*# sourceMappingURL=index.css.map */
