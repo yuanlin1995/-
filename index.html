@@ -13,23 +13,239 @@
     <script src="./lib/template-web.js"></script>
     <script>
         document.querySelector('html').style.fontSize = window.screen.width / 10 + 'px';
-        if(window.screen.width > 500){
+        console.log(window.screen.width );
+        
+        if (window.screen.width > 500) {
             document.querySelector('html').style.fontSize = '50px';
         }
     </script>
 </head>
 
 <body>
-    <div class="header">
-        <div class="search">
-            <input type="text" placeholder="酒店/目的地/景点/航班">
+    <div class="container">
+        <div class="header">
+            <div class="search">
+                <input type="text" id="search" placeholder="酒店/目的地/景点/航班">
+            </div>
+            <div class="icon">
+                <img src="./imgs/icon.png" alt="">
+                <span>我的</span>
+            </div>
         </div>
-        <div class="icon">
-            <img src="./imgs/icon.png" alt="">
-            <span>我的</span>
+        <div class="main">
+            <div class="banner">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <a href="" class="swiper-slide">
+                            <img src="./imgs/banner01.jpg" alt="">
+                        </a>
+                        <a href="" class="swiper-slide">
+                            <img src="./imgs/banner02.jpg" alt="">
+                        </a>
+                        <a href="" class="swiper-slide">
+                            <img src="./imgs/banner03.jpg" alt="">
+                        </a>
+                        <a href="" class="swiper-slide">
+                            <img src="./imgs/banner04.jpg" alt="">
+                        </a>
+                        <a href="" class="swiper-slide">
+                            <img src="./imgs/banner05.jpg" alt="">
+                        </a>
+                        <a href="" class="swiper-slide">
+                            <img src="./imgs/banner06.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <div class="nav">
+                <a href="">
+                    <img src="./imgs/nav1.png" alt="">
+                    <span>景点·游玩</span>
+                </a>
+                <a href="">
+                    <img src="./imgs/nav2.png" alt="">
+                    <span>周边游</span>
+                </a>
+                <a href="">
+                    <img src="./imgs/nav3.png" alt="">
+                    <span>美食林</span>
+                </a>
+                <a href="">
+                    <img src="./imgs/nav4.png" alt="">
+                    <span>一日游</span>
+                </a>
+                <a href="">
+                    <img src="./imgs/nav5.png" alt="">
+                    <span>当地攻略</span>
+                </a>
+            </div>
+            <div class="service">
+                <div class="hotel serv">
+                    <div class="left">
+                        <a href="">酒店</a>
+                    </div>
+                    <div class="right">
+                        <a href="">海外酒店</a>
+                        <a href="">团购</a>
+                        <a href="">特价酒店</a>
+                        <a href="">民宿.客栈</a>
+                    </div>
+                </div>
+                <div class="plane serv">
+                    <div class="left">
+                        <a href="">机票</a>
+                    </div>
+                    <div class="right">
+                        <a href="">火车票</a>
+                        <a href="">汽车票.船票</a>
+                        <a href="">特价机票</a>
+                        <a href="">专车.租车</a>
+                    </div>
+                </div>
+                <div class="travel serv">
+                    <div class="left">
+                        <a href="">旅游</a>
+                    </div>
+                    <div class="right">
+                        <a href="">门票</a>
+                        <a href="">游轮.旅行</a>
+                        <a href="">目的地攻略</a>
+                        <a href="">定制.旅行</a>
+                    </div>
+                </div>
+            </div>
+            <div class="work">
+                <a href="">
+                    <img src="./imgs/subnav1.png" alt="">
+                    <span>wifi</span>
+                </a>
+                <a href="">
+                    <img src="./imgs/subnav2.png" alt="">
+                    <span>签证</span>
+                </a>
+                <a href="">
+                    <img src="./imgs/subnav3.png" alt="">
+                    <span>保证签证</span>
+                </a>
+                <a href="">
+                    <img src="./imgs/subnav4.png" alt="">
+                    <span>签证</span>
+                </a>
+                <a href="">
+                    <img src="./imgs/subnav5.png" alt="">
+                    <span>外币兑换</span>
+                </a>
+                <a href="">
+                    <img src="./imgs/subnav6.png" alt="">
+                    <span>购物</span>
+                </a>
+                <a href="">
+                    <img src="./imgs/subnav7.png" alt="">
+                    <span>当地向导</span>
+                </a>
+                <a href="">
+                    <img src="./imgs/subnav8.png" alt="">
+                    <span>自由行</span>
+                </a>
+                <a href="">
+                    <img src="./imgs/subnav9.png" alt="">
+                    <span>海外游玩</span>
+                </a>
+                <a href="">
+                    <img src="./imgs/subnav10.png" alt="">
+                    <span>礼品卡</span>
+                </a>
+                <a href="">
+                    <img src="./imgs/subnav11.png" alt="">
+                    <span>信用卡</span>
+                </a>
+                <a href="">
+                    <img src="./imgs/subnav12.png" alt="">
+                    <span>更多</span>
+                </a>
+            </div>
         </div>
     </div>
-    <div class="main"></div>
+    <div class="searchBox">
+        <div class="header">
+            <a href="" class="back" id="back">
+                <img src="./imgs/back.png" alt="">
+            </a>
+            <div class="search">
+                <input type="text" placeholder="酒店/目的地/景点/航班" id="searchContent">
+            </div>
+            <a href="javascript:void(0)" class="icon" id="doSearch">
+                搜索
+            </a>
+        </div>
+        <div class="searchHistory" id="searchHistory">
+            <div class="top">搜索历史</div>
+            <div class="historyList" id="historyList">
+
+            </div>
+            <div class="clearHistory">
+                <a href="javascript:void(0)" id="clearHistory">清空搜索历史</a>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
+<script type="text/html" id="tpl">
+    <ul>
+        {{ each list value }}
+        <li>{{ value }}</li>
+        {{ /each }}
+    </ul>
+</script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: {
+            el: '.swiper-pagination',
+        },
+    });
+
+    $('#search').focus(function () {
+        $('.container').hide();
+        $('.searchBox').show();
+    });
+    $('#back').click(function () {
+        $('.container').show();
+        $('.searchBox').hide();
+    });
+
+
+    var hisStr = localStorage.getItem('hisList');
+    if (hisStr) {
+        $('#searchHistory').show();
+        render(JSON.parse(hisStr));
+    } else {
+        var hisArr = [];
+    }
+
+    $('#doSearch').click(function () {
+        if ($('#searchContent').val() != '') {
+            $('#searchHistory').show();
+            hisArr.unshift($('#searchContent').val());
+            localStorage.setItem('hisList', JSON.stringify(hisArr));
+            render(hisArr);
+        }
+        $('#searchContent').val('');
+    });
+
+    $('#clearHistory').click(function(){
+        localStorage.clear('hisList');
+        render([]);
+        $('#searchHistory').hide();
+        hisArr = [];
+    });
+
+
+    function render(arr) {
+        var html = template('tpl', {
+            list: arr
+        });
+        $('#historyList').html(html);
+    }
+</script>

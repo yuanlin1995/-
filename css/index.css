@@ -9,7 +9,8 @@ a {
   color: #333;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -27,29 +28,35 @@ body {
   font-size: 0.3381642512rem;
 }
 
-.header {
-  padding: 0 0.2415458937rem;
+.container .header {
+  position: fixed;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  padding: 0 0 0 0.2415458937rem;
   height: 1.0628019324rem;
-  border-bottom: 1px solid #dddddd;
+  width: 100%;
+  border-bottom: 0.0241545894rem solid #dddddd;
   display: flex;
   align-items: center;
+  z-index: 10;
 }
-.header .icon {
-  flex-basis: 0.845410628rem;
+.container .header .icon {
+  flex-basis: 1.0869565217rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
 }
-.header .icon img {
+.container .header .icon img {
   width: 0.4347826087rem;
   height: 0.38647343rem;
 }
-.header .icon span {
-  font-size: 0.3623188406rem;
+.container .header .icon span {
+  font-size: 0.3381642512rem;
   color: #099fde;
 }
-.header .search {
+.container .header .search {
   flex: 1;
   height: 0.6763285024rem;
   border: 0.0241545894rem solid #999;
@@ -57,6 +64,194 @@ body {
   line-height: 0.6763285024rem;
   padding-left: 0.7246376812rem;
   background: url("../imgs/glass.png") 0.1690821256rem center/0.4106280193rem 0.4106280193rem no-repeat;
+}
+.container .main {
+  background-color: #dddddd;
+  padding: 0 0.1207729469rem;
+  margin-top: 1.0628019324rem;
+}
+.container .main .banner {
+  margin: 0 -0.1207729469rem;
+}
+.container .main .banner img {
+  width: 100%;
+}
+.container .main .banner .swiper-pagination {
+  text-align: right;
+  bottom: 0;
+}
+.container .main .banner .swiper-pagination-bullet {
+  height: 0.1449275362rem;
+  width: 0.1449275362rem;
+  border-radius: 0.0724637681rem;
+  background-color: #333;
+}
+.container .main .banner .swiper-pagination-bullet-active {
+  width: 0.4347826087rem;
+  background-color: #fff;
+}
+.container .main .nav {
+  margin-top: 0.1207729469rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #fff;
+  border-radius: 0.2415458937rem;
+}
+.container .main .nav a {
+  padding: 0.1207729469rem 0;
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+.container .main .nav a img {
+  width: 1.3768115942rem;
+  height: 1.3768115942rem;
+}
+.container .main .nav a span {
+  font-size: 0.3381642512rem;
+}
+.container .main .service {
+  overflow: hidden;
+  border-radius: 0.2415458937rem;
+  background-color: #fff;
+  margin-top: 0.1207729469rem;
+}
+.container .main .service .hotel {
+  background: linear-gradient(to right, #fa5a54, #fa9b4f);
+}
+.container .main .service .hotel .left {
+  background: url("../imgs/item1.png") bottom/3.2367149758rem auto no-repeat;
+}
+.container .main .service .plane {
+  margin-top: 0.0724637681rem;
+  background: linear-gradient(to right, #4b90ed, #52baed);
+}
+.container .main .service .plane .left {
+  background: url("../imgs/item2.png") bottom/3.2367149758rem auto no-repeat;
+}
+.container .main .service .travel {
+  margin-top: 0.0724637681rem;
+  background: linear-gradient(to right, #34c2a8, #6bd45a);
+}
+.container .main .service .travel .left {
+  background: url("../imgs/item3.png") bottom/3.2367149758rem auto no-repeat;
+}
+.container .main .service .serv {
+  display: flex;
+  height: 2.4154589372rem;
+  width: 100%;
+}
+.container .main .service .serv a {
+  color: #fff;
+  font-size: 0.3381642512rem;
+}
+.container .main .service .serv .left {
+  flex: 1;
+  border-right: 0.0241545894rem solid white;
+  text-align: center;
+  padding-top: 0.4830917874rem;
+}
+.container .main .service .serv .right {
+  flex: 2;
+  display: flex;
+  flex-wrap: wrap;
+}
+.container .main .service .serv .right a {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .main .service .serv .right a:nth-child(odd) {
+  border-right: 0.0241545894rem solid #fff;
+}
+.container .main .service .serv .right a:nth-child(n+3) {
+  border-top: 0.0241545894rem solid #fff;
+}
+.container .main .work {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff;
+  border-radius: 0.2415458937rem;
+  margin-top: 0.1207729469rem;
+}
+.container .main .work a {
+  width: 16.666666666%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.1207729469rem 0;
+}
+.container .main .work a img {
+  width: 0.5797101449rem;
+  height: 0.4830917874rem;
+}
+.container .main .work a span {
+  font-size: 0.3381642512rem;
+}
+
+.searchBox {
+  display: none;
+}
+.searchBox .header {
+  position: fixed;
+  background-color: #e6f0f7;
+  top: 0;
+  left: 0;
+  padding: 0 0.2415458937rem;
+  height: 1.0628019324rem;
+  width: 100%;
+  border-bottom: 0.0241545894rem solid #dddddd;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+.searchBox .header .icon,
+.searchBox .header .back {
+  flex-basis: 1.0869565217rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.searchBox .header .back img {
+  width: 0.4830917874rem;
+  height: 0.4830917874rem;
+}
+.searchBox .header .search {
+  flex: 1;
+  height: 0.6763285024rem;
+  border: 0.0241545894rem solid #999;
+  border-radius: 0.1207729469rem;
+  line-height: 0.6763285024rem;
+  padding-left: 0.7246376812rem;
+  background: url("../imgs/glass.png") 0.1690821256rem center/0.4106280193rem 0.4106280193rem no-repeat;
+  background-color: #fff;
+}
+.searchBox .searchHistory {
+  display: none;
+  margin-top: 1.0628019324rem;
+}
+.searchBox .searchHistory .top {
+  padding-left: 0.2415458937rem;
+  background-color: #f6f6f6;
+  line-height: 0.7246376812rem;
+}
+.searchBox .searchHistory .historyList ul li {
+  line-height: 1.2077294686rem;
+  border-top: 0.0241545894rem solid #ccc;
+  padding-left: 0.4830917874rem;
+}
+.searchBox .searchHistory .clearHistory {
+  border-top: 0.0241545894rem solid #ccc;
+  text-align: center;
+  line-height: 1.2077294686rem;
+}
+.searchBox .searchHistory .clearHistory a {
+  color: #194de0;
 }
 
 /*# sourceMappingURL=index.css.map */

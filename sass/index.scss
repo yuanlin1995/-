@@ -1,4 +1,4 @@
-@function pr($p){
+@function pr($p) {
     @return $p/41.4+rem;
 }
 
@@ -13,7 +13,8 @@ a {
     color: #333;
 }
 
-ul,ol {
+ul,
+ol {
     list-style: none;
 }
 
@@ -31,34 +32,237 @@ body {
     font-size: pr(14);
 }
 
-.header {
-    padding: 0 pr(10);
-    height: pr(44);
-    border-bottom: 1px solid #dddddd;
-    display: flex;
-    align-items: center;
-    .icon {
-        flex-basis: pr(35);
+.container {
+    .header {
+        position: fixed;
+        background-color: #fff;
+        top: 0;
+        left: 0;
+        padding: 0 0 0 pr(10);
+        height: pr(44);
+        width: 100%;
+        border-bottom: pr(1) solid #dddddd;
         display: flex;
-        justify-content: space-around;
         align-items: center;
-        flex-direction: column;
-        img {
-            width: pr(18);
-            height: pr(16);
+        z-index: 10;
+        .icon {
+            flex-basis: pr(45);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            img {
+                width: pr(18);
+                height: pr(16);
+            }
+            span {
+                font-size: pr(14);
+                color: #099fde;
+            }
         }
-        span {
-            font-size: pr(15);
-            color: #099fde;
+        .search {
+            flex: 1;
+            height: pr(28);
+            border: pr(1) solid #999;
+            border-radius: pr(5);
+            line-height: pr(28);
+            padding-left: pr(30);
+            background: url('../imgs/glass.png') pr(7) center/pr(17) pr(17) no-repeat;
         }
     }
-    .search {
-        flex: 1;
-        height: pr(28);
-        border: pr(1) solid #999;
-        border-radius: pr(5);
-        line-height: pr(28);
-        padding-left: pr(30);
-        background: url('../imgs/glass.png') pr(7) center/pr(17) pr(17) no-repeat;
+    .main {
+        background-color: #dddddd;
+        padding: 0 pr(5);
+        margin-top: pr(44);
+        .banner {
+            margin: 0 pr(-5);
+            img {
+                width: 100%;
+            }
+            .swiper-pagination {
+                text-align: right;
+                bottom: 0;
+            }
+            .swiper-pagination-bullet {
+                height: pr(6);
+                width: pr(6);
+                border-radius: pr(3);
+                background-color: #333;
+            }
+            .swiper-pagination-bullet-active {
+                width: pr(18);
+                background-color: #fff;
+            }
+        }
+        .nav {
+            margin-top: pr(5);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: #fff;
+            border-radius: pr(10);
+            a {
+                padding: pr(5) 0;
+                width: 20%;
+                display: flex;
+                justify-content: space-around;
+                flex-direction: column;
+                align-items: center;
+                img {
+                    width: pr(57);
+                    height: pr(57);
+                }
+                span {
+                    font-size: pr(14);
+                }
+            }
+        }
+        .service {
+            overflow: hidden;
+            border-radius: pr(10);
+            background-color: #fff;
+            margin-top: pr(5);
+            .hotel {
+                background: linear-gradient(to right, #fa5a54, #fa9b4f);
+                .left {
+                    background: url('../imgs/item1.png') bottom /pr(134) auto no-repeat;
+                }
+            }
+            .plane {
+                margin-top: pr(3);
+                background: linear-gradient(to right, #4b90ed, #52baed);
+                .left {
+                    background: url('../imgs/item2.png') bottom /pr(134) auto no-repeat;
+                }
+            }
+            .travel {
+                margin-top: pr(3);
+                background: linear-gradient(to right, #34c2a8, #6bd45a);
+                .left {
+                    background: url('../imgs/item3.png') bottom /pr(134) auto no-repeat;
+                }
+            }
+            .serv {
+                display: flex;
+                height: pr(100);
+                width: 100%;
+                a {
+                    color: #fff;
+                    font-size: pr(14);
+                }
+                .left {
+                    flex: 1;
+                    border-right: pr(1) solid white;
+                    text-align: center;
+                    padding-top: pr(20);
+                }
+                .right {
+                    flex: 2;
+                    display: flex;
+                    flex-wrap: wrap;
+                    a {
+                        width: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        &:nth-child(odd) {
+                            border-right: pr(1) solid #fff;
+                        }
+                        &:nth-child(n+3) {
+                            border-top: pr(1) solid #fff;
+                        }
+                    }
+                }
+            }
+        }
+        .work {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #fff;
+            border-radius: pr(10);
+            margin-top: pr(5);
+            a {
+                width: 16.666666666%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-direction: column;
+                padding: pr(5) 0;
+                img {
+                    width: pr(24);
+                    height: pr(20);
+                }
+                span {
+                    font-size: pr(14);
+                }
+            }
+        }
+    }
+}
+
+.searchBox {
+    display: none;
+    .header {
+        position: fixed;
+        background-color: #e6f0f7;
+        top: 0;
+        left: 0;
+        padding: 0 pr(10);
+        height: pr(44);
+        width: 100%;
+        border-bottom: pr(1) solid #dddddd;
+        display: flex;
+        align-items: center;
+        z-index: 10;
+        .icon,
+        .back {
+            flex-basis: pr(45);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .back {
+            img {
+                width: pr(20);
+                height: pr(20);
+            }
+        }
+        .search {
+            flex: 1;
+            height: pr(28);
+            border: pr(1) solid #999;
+            border-radius: pr(5);
+            line-height: pr(28);
+            padding-left: pr(30);
+            background: url('../imgs/glass.png') pr(7) center/pr(17) pr(17) no-repeat;
+            background-color: #fff;
+        }
+    }
+
+    .searchHistory {
+        display: none;
+        margin-top: pr(44);
+        .top {
+            padding-left: pr(10);
+            background-color: #f6f6f6;
+            line-height: pr(30);
+        }
+        .historyList {
+            ul {
+                li {
+                    line-height: pr(50);
+                    border-top: pr(1) solid #ccc;
+                    padding-left: pr(20);
+                }
+            }
+        }
+        .clearHistory {
+            border-top: pr(1) solid #ccc;
+            text-align: center;
+            line-height: pr(50);
+            a {
+                color: #194de0;
+            }
+        }
     }
 }
